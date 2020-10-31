@@ -32,6 +32,16 @@ public class DataConfiguration {
         return basicDataSource;
     }
 	
+	public JpaVendorAdapter jpaVendorAdapter() {
+		   HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+		   adapter.setDatabase(Database.POSTGRESQL);
+		   adapter.setShowSql(true);
+		   adapter.setGenerateDdl(true);
+		   adapter.setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
+		   adapter.setPrepareConnection(true);
+		   return adapter;
+		   }
+	
 	
 	//Configurações para mysql
 	/*
