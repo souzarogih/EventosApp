@@ -43,6 +43,7 @@ public class DataConfiguration {
 		   }
 	
 	
+	
 	//Configurações para mysql
 	/*
 	@Bean
